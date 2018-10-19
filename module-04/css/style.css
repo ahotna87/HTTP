@@ -1,0 +1,117 @@
+body {
+  background-image: url(../image/default-bg.jpg);
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: cover;
+}
+main {
+  box-sizing: border-box;
+  background-color: white;
+  width: 1024px;
+  margin: 230px auto;
+  padding: 117px 60px 77px 60px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #263555;
+}
+img {
+  float: left;
+  margin: 0px 20px 20px 0px;
+}
+h1,
+h2 {
+  font-family: "Pathway Gothic One", sans-serif;
+  line-height: 1.5;
+  text-transform: uppercase;
+  font-size: 32px;
+}
+.citate,
+h3 {
+  font-size: 15px;
+  line-height: 19px;
+  color: #263555;
+}
+p {
+  font-size: 13px;
+  line-height: 19px;
+  color: #4e5050;
+}
+ul {
+  font-size: 15px;
+  line-height: 35px;
+  font-weight: 700;
+  column-count: 2;
+  list-style: none;
+}
+li::before {
+  content: "\2192";
+  margin-right: 10px;
+  color: #38afe5;
+}
+#autor {
+  text-transform: capitalize;
+  font-size: 16px;
+  line-height: 22.8px;
+}
+header,
+#offer {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  width: 675px;
+  padding-right: 25px;
+}
+#principles,
+aside {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  width: 224px;
+  padding-left: 10px;
+}
+.citate {
+  box-sizing: border-box;
+  background-color: #f7f4f4;
+  border: 1px solid #dfdcdc;
+  width: 210px;
+  margin: 24px auto 35px;
+  padding: 23px;
+}
+.citate::before {
+  content: open-quote;
+}
+.citate::after {
+  content: close-quote;
+}
+
+figure {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+hr {
+  border-top: 1px solid #dedbdb;
+  border-bottom: 0;
+  margin: 45px 0;
+}
+#principles {
+  counter-reset: count-princip;
+}
+.princip::before {
+  counter-increment: count-princip;
+  content: counter(count-princip);
+  display: block;
+  border: 1px solid #0c7bae;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #38afe5;
+  margin-right: 15px;
+  text-align: center;
+  float: left;
+  font-size: 15px;
+  line-height: 25px;
+  color: white;
+}
+.princip + p {
+  margin-left: 36px;
+}
