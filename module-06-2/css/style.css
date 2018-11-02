@@ -1,0 +1,363 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  margin-bottom: 0.83em;
+  font-family: "Pathway Gothic One", sans-serif;
+  line-height: 1.5;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 100;
+}
+
+h3 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+body {
+  background-image: url(../image/default-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
+}
+header {
+  box-sizing: border-box;
+  width: 1024px;
+  margin: 30px auto;
+  padding-left: 57px;
+  padding-right: 57px;
+}
+
+main {
+  box-sizing: border-box;
+  width: 1024px;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 117px 60px 77px 60px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #263555;
+}
+
+/*    navigation   */
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Pathway Gothic One", sans-serif;
+  text-transform: uppercase;
+  align-items: center;
+  min-height: 185px;
+}
+
+.about-item a:hover,
+.menu-item a:hover,
+.menu-item a:focus {
+  color: #263555;
+}
+
+.navigation1,
+.navigation2,
+.logo {
+  display: flex;
+  justify-content: space-between;
+}
+.menu-item {
+  position: relative;
+  list-style: none;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 28px;
+  color: white;
+  transition: color 0.5s linear;
+}
+.menu-item > a {
+  padding: 10px 35px;
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+.navigation1 .menu-item:first-child a {
+  padding-left: 0;
+}
+.navigation2 .menu-item:last-child a {
+  padding-right: 0;
+}
+
+.about-item a {
+  font-size: 20px;
+  color: #6b7488;
+  display: block;
+  text-decoration: none;
+}
+
+.about::before {
+  display: block;
+  content: "\25B2";
+  position: absolute;
+  color: white;
+  top: -10px;
+  left: 22.5px;
+}
+.about {
+  /* делаем невидимым .submenu */
+  display: none; /* при появлении .submenu окажется поверх других элементов */
+  color: #6b7488;
+  position: absolute;
+  list-style: none;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  color: white;
+}
+
+/* делаем .submenu видимым */
+.menu-item:hover > .about {
+  display: block;
+  transition: 0.4s;
+}
+
+.menu-item a {
+  transition: color 0.5s linear;
+}
+
+.about a:hover {
+  display: block;
+  color: #00aeff;
+  transition: color 0.2s linear;
+}
+
+/*------------LOGO-------------*/
+.logo {
+  max-width: 140px;
+  max-height: 140px;
+}
+
+h1 {
+  list-style: none;
+  text-decoration: none;
+  font-weight: 100;
+  position: relative;
+  color: white;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: white;
+  text-align: center;
+  color: #263555;
+  font-family: "Dorsa", sans-serif;
+  font-size: 60px;
+  line-height: 2.3;
+}
+
+/*------------IMAGE------------*/
+.gallery {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.gallery li {
+  height: 155px;
+  width: 288px;
+}
+
+.gallery .pictures .img {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+}
+.pictures {
+  margin-right: 20px;
+  margin-bottom: 40px;
+}
+
+.pictures:nth-child(3n + 3) {
+  margin-right: 0;
+}
+.gallery a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.gallery a:before {
+  position: absolute;
+  width: 32px;
+  height: 28px;
+  top: 40%;
+  left: 50%;
+  margin: -14px 0 0 -10px;
+  background: url(../image/icon.png) no-repeat;
+  content: "";
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.3s linear;
+}
+.gallery a:hover:before {
+  top: 50%;
+  opacity: 1;
+}
+.gallery a:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  content: "";
+  opacity: 0;
+  transition: all 0.3s linear;
+  z-index: 1;
+}
+.gallery a:hover:after {
+  opacity: 1;
+}
+
+/*----------FOOTER-----------*/
+
+footer {
+  box-sizing: border-box;
+  width: 1024px;
+  margin: auto;
+  background-color: #30455b;
+}
+
+.footer {
+  min-height: 135px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+.footerItem a {
+  display: block;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: left;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.footer a {
+  transition: color 0.2s linear;
+}
+.footer a:hover {
+  display: block;
+  color: #00aeff;
+}
+
+a.link {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 19px;
+  text-transform: lowercase;
+}
+a.phone {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+/*----------TO-TOP--------*/
+.to-top {
+  background-color: #38afe5;
+  color: white;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  opacity: 0.5;
+  text-decoration: none;
+  text-align: center;
+  bottom: 5vh;
+  right: 8vw;
+  position: fixed;
+}
+
+.to-top::before {
+  content: "";
+  width: 2px;
+  height: 20px;
+  background: white;
+  transform: rotate(45deg);
+  position: fixed;
+  margin-top: 8px;
+  margin-left: -8px;
+}
+
+.to-top::after {
+  content: "";
+  width: 2px;
+  height: 20px;
+  background: white;
+  transform: rotate(-45deg);
+  margin-top: 8px;
+  margin-left: 5px;
+  position: fixed;
+}
+
+/*--------SOCIAL LINK-------*/
+
+.social {
+  box-sizing: border-box;
+  width: 1024px;
+  margin: auto;
+}
+.socialLink {
+  min-height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialLinkItem {
+  position: relative;
+  list-style: none;
+}
+.socialLinkItem a {
+  list-style: none;
+  text-decoration: none;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+}
+.socialLinkItem:not(:last-child) a {
+  padding-right: 12px;
+}
+.iconTwitter {
+  background-image: url(../image/twitter.png);
+  text-indent: -9999px;
+}
+.iconFacebook {
+  background-image: url(../image/fasebook.png);
+  text-indent: -9999px;
+}
+.iconGoogle {
+  background-image: url(../image/google.png);
+  text-indent: -9999px;
+}
+.iconLinkedin {
+  background-image: url(../image/linkedin.png);
+  text-indent: -9999px;
+}
+.social p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
