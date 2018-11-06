@@ -1,0 +1,230 @@
+@font-face {
+  font-family: "Vesna";
+  font-family: "Montserrat", sans-serif;
+  src: url("https://fonts.googleapis.com/css?family=Montserrat");
+  font-weight: 40px;
+  font-style: italic;
+}
+
+body {
+  background-color: #282828;
+}
+
+main {
+  box-sizing: border-box;
+  width: 1400px;
+  margin: auto;
+}
+nav {
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  max-width: 940px;
+  height: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  font-family: "Vesna";
+  font-size: 26px;
+  text-align: 41px;
+  color: #fed136;
+}
+nav a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../image/BackgroundImage.jpg);
+  background-repeat: no-repeat;
+  margin: auto;
+  padding: 50px 230px;
+}
+.menu {
+  margin: 0;
+  padding: 0;
+  width: 485px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  align-items: center;
+}
+.menu-item a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.home {
+  margin: 130px auto;
+  padding: 0;
+  align-items: center;
+  text-align: center;
+}
+.welcome {
+  font-family: "Vesna";
+  font-size: 40px;
+  text-transform: capitalize;
+  color: #ffffff;
+  line-height: 1.2;
+}
+.nice {
+  font-family: "Montserrat", sans-serif;
+  font-size: 75px;
+  /* letter-spacing: -25px; */
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+.tellMeMore,
+.sendMessadge {
+  font-family: "Montserrat", sans-serif;
+  border-radius: 5px;
+  border-width: 0;
+  width: 242px;
+  height: 65px;
+  background-color: #fed136;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* CENTER */
+
+.services {
+  padding: 120px 230px;
+  margin: 0;
+  text-align: center;
+  background-color: #fff;
+}
+.services h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  /* letter-spacing: -25px; */
+  line-height: 75px;
+  text-transform: uppercase;
+}
+p {
+  font-family: "DroidSerif", "serif";
+  color: #777777;
+}
+.description {
+  font-family: "RobotoSlab";
+  font-size: 14px;
+  line-height: 1.5;
+}
+.services > p {
+  font-size: 16px;
+  margin-bottom: 80px;
+}
+.services-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.services-list h3 {
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.services-item {
+  width: 290px;
+}
+
+.services-list-item::before {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 73px;
+  width: 73px;
+  border: 3.5px #fed136 solid;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 25px;
+}
+.icon-basket::before {
+  background-image: url(../image/icon/Icon-Basket.png);
+}
+.icon-laptop::before {
+  background-image: url(../image/icon/Icon-Laptop.png);
+}
+.icon-locked::before {
+  background-image: url(../image/icon/Icon-Locked.png);
+}
+
+/* BOOTOM */
+
+.contactUs {
+  margin: 0;
+  padding: 110px 230px;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../image/MapImage.gif);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.contactUs h2 {
+  font-size: 40px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.contactUs p {
+  font-size: 16px;
+  margin-bottom: 80px;
+  color: #ffffff;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contactUs-fild-user {
+  width: 455px;
+}
+.sendMessadge {
+  display: block;
+  margin: 30px auto;
+}
+input,
+textarea {
+  outline: none;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+  display: block;
+  padding: 20px;
+  width: 455px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form input:not(:last-child) {
+  margin-bottom: 30px;
+}
+.form input {
+  height: 50px;
+}
+
+::placeholder {
+  text-transform: uppercase;
+  font-size: 14px;
+  text-overflow: ellipsis;
+}
+
+textarea {
+  height: 210px;
+  resize: none;
+}
+
+input:valid:not(:placeholder-shown) {
+  border-color: green;
+}
+
+input:invalid:not(:placeholder-shown) {
+  border-color: red;
+}
