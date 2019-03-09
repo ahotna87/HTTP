@@ -1,0 +1,27 @@
+{
+  "name": "homevwork-11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss:build": "node-sass module-10/crs/scss/style.scss -o module-10/css",
+    "scss:watch": "node-sass --watch module-10/crs/scss/style.scss -o module-10/css",
+    "build": "npm run scss:build && npm run scss:watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahotna87/HTTP.git"
+  },
+  "keywords": [
+    "fkvfksr"
+  ],
+  "author": "ahotna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahotna87/HTTP/issues"
+  },
+  "homepage": "https://github.com/ahotna87/HTTP#readme",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

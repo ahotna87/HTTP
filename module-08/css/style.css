@@ -1,0 +1,229 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: MontserratBold;
+  src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Thin.ttf);
+}
+body {
+  background-color: #282828;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  min-width: 320px;
+  background-color: white;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+.nav {
+  padding: 0;
+  margin: 0;
+  width: 200px;
+  height: 36px;
+  text-align: center;
+  margin-bottom: 110px;
+}
+.nav a {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  height: 34px;
+  width: 88px;
+  text-decoration: none;
+  color: white;
+  line-height: 2em;
+  text-align: center;
+  font-family: "MontserratBold", regular;
+  font-size: 0.9em;
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-radius: 20px;
+}
+
+.nav a:hover {
+  border-color: white;
+  transition: 0.2s;
+}
+.login {
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  align-items: center;
+}
+
+.head {
+  min-width: 320px;
+  height: 540px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../image/wrapper.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.urlaubsglüq {
+  text-decoration: none;
+  color: white;
+  margin: auto;
+  text-transform: uppercase;
+  font-family: "MontserratBold", regular;
+  letter-spacing: 1px;
+  font-size: 1.3em;
+}
+.urlaubsglüq:hover {
+  color: #ff4e50;
+  transition: 0.2s;
+}
+.head h1 {
+  width: 300px;
+  margin: auto;
+  margin-bottom: 10px;
+  color: white;
+  font-family: MontserratBold;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+.head p {
+  width: 220px;
+  height: 50px;
+  margin: auto;
+  margin-bottom: 17px;
+  color: white;
+  font-family: Roboto;
+  font-size: 1.1em;
+  font-weight: 100;
+  text-align: center;
+}
+
+/*-----BUTTON----- */
+.find {
+  display: block;
+  margin: auto;
+  width: 280px;
+  height: 40px;
+  background-color: #ff4e50;
+  border: 2px solid #ff4e50;
+  border-radius: 20px;
+  color: white;
+  font-family: Montserrat;
+  font-size: 0.8em;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  line-height: 33px;
+}
+.find:hover {
+  color: #ff4e50;
+  background-color: white;
+  transition: 0.2s;
+}
+.seeOther {
+  display: block;
+  margin: 20px auto;
+  width: 280px;
+  height: 40px;
+  background-color: white;
+  border-radius: 20px;
+  border: 2px solid #ff4e50;
+  color: #ff4e50;
+  font-family: MontserratBold;
+  font-size: 0.9em;
+  text-decoration: none;
+  text-align: center;
+  line-height: 37px;
+}
+.seeOther:hover {
+  color: white;
+  background-color: #ff4e50;
+  transition: 0.2s;
+}
+.seeOther,
+.find:focus {
+  outline: none;
+}
+
+.team {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+  color: #333333;
+  line-height: 1.2;
+  padding: 10px;
+  text-align: center;
+  margin: 0 auto;
+}
+.team-card {
+  list-style: none;
+  padding: 0;
+}
+.team h2 {
+  padding-top: 70px;
+  width: 270px;
+  margin: 0 auto 17px;
+  color: #333;
+  font-family: MontserratBold;
+  font-size: 1.3em;
+  text-align: center;
+}
+.team-card-item {
+  width: 310px;
+  height: 260px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+.icon {
+  position: relative;
+  width: 310px;
+  border: 1px solid red;
+}
+.icon::after {
+  position: absolute;
+  display: block;
+  width: 35px;
+  height: 35px;
+  border: 5px #fff solid;
+  border-radius: 50%;
+  bottom: 0;
+  line-height: 1.7;
+  right: 90px;
+}
+.team-card-about {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.team1::after {
+  content: url(../image/icon/tv.png.svg);
+  background-color: #ff4e50;
+}
+.team2::after {
+  content: url(../image/icon/colb.png.svg);
+  background-color: #ffa507;
+}
+.team3::after {
+  content: url(../image/icon/cup.png.svg);
+  background-color: #30dab4;
+}
+
+.team4::after {
+  content: url(../image/icon/plane.png.svg);
+  background-color: #4e73db;
+}

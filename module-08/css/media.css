@@ -1,0 +1,49 @@
+@media (min-width: 748px) {
+  .head {
+    height: 700px;
+  }
+  h1 {
+    font-size: 3em;
+    width: 480px;
+    margin-bottom: 30px;
+  }
+  .head p {
+    width: 100%;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+  }
+  .find {
+    width: 220px;
+  }
+  .login {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .nav {
+    margin: 0;
+    order: 2;
+  }
+  .urlaubsglüq {
+    margin: 0;
+    order: 1;
+  }
+  h2 {
+    width: 100%;
+  }
+  .seeOther {
+    width: 190px;
+  }
+  .team-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 940px) {
+  .team-card {
+    flex-wrap: nowrap;
+  }
+}
