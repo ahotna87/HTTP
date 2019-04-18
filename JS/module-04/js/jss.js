@@ -119,8 +119,6 @@ function Cashier(name, products) {
       return alert(`Спасибо за покупку, ваша сдача ${this.changeAmount}`);
     }
 
-    return alert(`Очень жаль, что-то пошло не так, приходите еще.`);
-
   } //метод, считает сдачу, разницу между общей суммой покупок и деньгами покупателя.
 
   this.reset = function () {
