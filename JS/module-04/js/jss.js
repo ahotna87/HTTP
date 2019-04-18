@@ -110,14 +110,15 @@ function Cashier(name, products) {
   } //метод, получает список покупок, считает общую сумму исходя из поля products
 
   this.getCustomerMoney = function () {
-    this.customerMoney = prompt(`Сумма Ваших покупок составляет ${this.totalPrice} \n Укажите сумму, которую дал клиент`);
+    do { this.customerMoney = prompt(`Сумма Ваших покупок составляет ${this.totalPrice} \n Укажите сумму, которую дал клиент`) }
+    while (this.customerMoney == null || this.customerMoney < this.totalPrice);
+
   } //метод, при вызове показывает prompt, в котором указана общая сумма покупок из поля totalPrice.
 
   this.countChange = function () {
-    if (this.totalPrice <= this.customerMoney) {
-      this.changeAmount = this.customerMoney - this.totalPrice;
-      return alert(`Спасибо за покупку, ваша сдача ${this.changeAmount}`);
-    }
+    this.changeAmount = this.customerMoney - this.totalPrice;
+    return alert(`Спасибо за покупку, ваша сдача ${this.changeAmount}`);
+
 
   } //метод, считает сдачу, разницу между общей суммой покупок и деньгами покупателя.
 
