@@ -11,10 +11,13 @@
 
 // const cat = new Animal("Vasya", 6, 4);
 
+// const dog = new Animal("Vasya", 6, 4, false);
+
 // Animal.prototype.tail = true;
 
 // console.log(rat);
 // console.log(cat);
+
 class Hamburger {
   constructor(size, stuffing) {
     this._size = size;
@@ -29,7 +32,7 @@ class Hamburger {
   }
   removeTopping(topping) {
     return (this._toppings = this._toppings.filter(
-      toppings => toppings !== topping
+      (toppings) => toppings !== topping
     ));
   }
 
@@ -59,9 +62,7 @@ class Hamburger {
   calculateCalories() {
     const totalCalories =
       this._toppings.reduce(
-        (acc, item) => acc + Hamburger.TOPPINGS[item].calories,
-        0
-      ) +
+        (acc, item) => acc + Hamburger.TOPPINGS[item].calories,0) +
       Hamburger.STUFFINGS[this._stuffing].calories +
       Hamburger.SIZES[this._size].calories;
     return totalCalories;
@@ -74,51 +75,65 @@ Hamburger.SIZE_LARGE = "SIZE_LARGE";
 Hamburger.SIZES = {
   [Hamburger.SIZE_SMALL]: {
     price: 30,
-    calories: 50
+    calories: 50,
   },
   [Hamburger.SIZE_LARGE]: {
     price: 60,
-    calories: 100
-  }
+    calories: 100,
+  },
 };
 
 Hamburger.STUFFING_CHEESE = "STUFFING_CHEESE";
 Hamburger.STUFFING_SALAD = "STUFFING_SALAD";
 Hamburger.STUFFING_MEAT = "STUFFING_MEAT";
+Hamburger.STUFFING_TOMATO = "STUFFING_TOMATO";
 
 Hamburger.STUFFINGS = {
   [Hamburger.STUFFING_CHEESE]: {
     price: 15,
-    calories: 20
+    calories: 20,
   },
   [Hamburger.STUFFING_SALAD]: {
     price: 20,
-    calories: 5
+    calories: 5,
   },
   [Hamburger.STUFFING_MEAT]: {
     price: 35,
-    calories: 15
-  }
+    calories: 15,
+  },
+  [Hamburger.STUFFING_TOMATO]: {
+    price: 30,
+    calories: 13,
+  },
 };
 
 Hamburger.TOPPING_SPICE = "TOPPING_SPICE";
 Hamburger.TOPPING_SAUCE = "TOPPING_SAUCE";
+Hamburger.TOPPING_MUSTARD = "TOPPING_MUSTARD";
 
 Hamburger.TOPPINGS = {
   [Hamburger.TOPPING_SPICE]: {
     price: 10,
-    calories: 1
+    calories: 1,
   },
   [Hamburger.TOPPING_SAUCE]: {
     price: 15,
-    calories: 5
-  }
+    calories: 5,
+  },
+  [Hamburger.TOPPING_MUSTARD]: {
+    price: 5,
+    calories: 3,
+  },
 };
 
-const hamburger = new Hamburger(Hamburger.SIZE_SMALL, Hamburger.STUFFING_MEAT);
+const hamburger = new Hamburger(
+  Hamburger.SIZE_SMALL,
+  Hamburger.STUFFING_TOMATO,
+);
 
 hamburger.addTopping(Hamburger.TOPPING_SPICE);
 hamburger.addTopping(Hamburger.TOPPING_SAUCE);
+hamburger.addTopping(Hamburger.TOPPING_MUSTARD);
 
 console.log("Calories: ", hamburger.calculateCalories());
 console.log("Price: ", hamburger.calculatePrice());
@@ -126,8 +141,8 @@ console.log("Price: ", hamburger.calculatePrice());
 console.log("Price with sauce: ", hamburger.calculatePrice());
 
 console.log(
-  "Is hamburger small: ",
-  hamburger.getHamburgerSize === Hamburger.SIZE_SMALL
+  "Is hamburger large: ",
+  hamburger.getHamburgerSize === Hamburger.SIZE_LARGE
 ); // -> true
 
 hamburger.removeTopping(Hamburger.TOPPING_SPICE);
