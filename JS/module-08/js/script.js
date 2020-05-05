@@ -1,4 +1,4 @@
-"use.strict";
+"use strict";
 // const num = prompt("Введите число", 55);
 
 // function colonOdd(num) {
@@ -163,3 +163,367 @@
 // }
 
 // *********************************************************************************
+
+// вместо аррай пушш
+// return objKeys.reduce((acc, val) =>
+//     frequency[val] === highestVal
+//       ? [...acc, val]
+//       : acc
+// ,[]);
+
+//====================================================
+
+// first=======================
+// const button = document.createElement("button");
+// button.textContent = "CLICK ME!";
+
+// button.addEventListener('click', handlerClick);
+// function handlerClick(){
+//    alert ('Hello!');
+// }
+// const body = document.querySelector("body");
+// body.append(button);
+
+// console.log(body);
+
+//second=======================
+// const button = document.createElement("button");
+// button.textContent = "CLICK ME!";
+
+// button.addEventListener('mouseover', handlerClick);
+// function handlerClick(){
+//    alert ('Hello!');
+// }
+// const body = document.querySelector("body");
+// body.append(button);
+
+// console.log(body);
+
+//third=======================
+// const button = document.createElement("button");
+// button.textContent = "CLICK ME!";
+
+// button.addEventListener("dblclick", handlerClick);
+// function handlerClick() {
+//   alert("Hello!");
+// }
+// const body = document.querySelector("body");
+// body.append(button);
+
+// console.log(body);
+
+//fourth=======================
+// const squre = document.createElement("div");
+// squre.textContent = "Focus on Me!";
+// squre.addEventListener("mouseout", handlerMouseout);
+// function handlerMouseout() {
+//   alert("Hello!");
+// }
+// const body = document.querySelector("body");
+// body.append(squre);
+
+// console.log(body);
+
+//fifth=========================
+// const button = document.createElement("button");
+// button.textContent = "CLICK ME!";
+
+// button.addEventListener("click", handlerClick);
+
+// const input = document.createElement("input");
+// input.type = "text";
+// input.value = "ku-ku";
+
+// function handlerClick() {
+//   alert(input.value);
+// }
+
+// const body = document.querySelector("body");
+// body.append(button, input);
+
+// console.log(body);
+
+//sixth=========================
+// const button = document.createElement("button");
+// button.textContent = "CLICK ME!";
+
+// button.addEventListener("click", handlerClick);
+
+// const input = document.createElement("input");
+// input.type = "text";
+// input.value = "ku-ku";
+
+// function handlerClick() {
+//   input.value = "Ups, I changed yuor text!!!";
+// }
+
+// const body = document.querySelector("body");
+// body.append(button, input);
+
+// console.log(body);
+
+//seventh======================
+// const button = document.createElement("button");
+// button.textContent = "CLICK ME!";
+
+// const img = document.createElement("img");
+// img.src = "https://placeimg.com/640/480/nature";
+
+// button.addEventListener("click", handlerClick);
+
+// function handlerClick() {
+//   img.src = "https://placeimg.com/640/480/any";
+// }
+
+// const body = document.querySelector("body");
+// body.append(button, img);
+
+// console.log(body);
+
+//eigth======================
+
+// const input = document.createElement("input");
+// input.type = "text";
+// input.value = "ku-ku";
+
+// function handlerClick(event) {
+//   console.log(event.target);
+//   if (event.target !== this) {
+//     input.value = "Ups, I changed yuor text!!!";
+//   } else if (event.target === this) {
+//     input.value = "Ups, again!";
+//   }
+// }
+
+// const body = document.querySelector("body");
+// body.addEventListener("click", handlerClick);
+// body.append(input);
+
+// console.log(body);
+//======================================
+
+// const input = document.createElement("input");
+// input.type = "submit";
+// input.value = "Click on Me!";
+// input.addEventListener("click", handlerClick);
+
+// function handlerClick() {
+//   input.value = "Ups, I changed yuor text!!!";
+// }
+
+// const body = document.querySelector("body");
+// body.append(input);
+
+// console.log(body);
+
+//======================================
+// const input = document.createElement("input");
+// input.type = "submit";
+// input.value = "Click on Me!";
+// input.addEventListener("click", handlerClick);
+
+// function handlerClick() {
+//   this.value = "Ups, yuo can't touch me!!!";
+//   this.style.color = "red";
+//   this.disabled = true;
+//   console.log(window);
+// }
+
+// const body = document.querySelector("body");
+// body.append(input);
+
+//============================================
+// const img = document.createElement("img");
+
+// function handlerClick(event) {
+//   if (event.target !== this) {
+//     img.src = "https://placeimg.com/640/480/any";
+//   } else {
+//     img.src = "https://placeimg.com/640/480/nature";
+//   }
+// }
+
+// const body = document.querySelector("html");
+// body.addEventListener("mouseover", handlerClick);
+// body.append(img);
+
+// console.log(body);
+//=============================================
+// const input_1 = document.createElement("input");
+// input_1.type = "submit";
+// input_1.value = "Click on Me!";
+// input_1.addEventListener("click", handlerOn);
+
+// const input_2 = document.createElement("input");
+// input_2.type = "submit";
+// input_2.value = "Click on me, unblocked upper button";
+// input_2.style = "display:none";
+// input_2.addEventListener("click", handlerOff);
+
+// function handlerOn() {
+//   this.value = "Ups, yuo can't touch me!!!";
+//   this.style.color = "red";
+//   this.disabled = true;
+//   input_2.style = "display:block";
+//   console.log(window);
+// }
+
+// function handlerOff() {
+//   this.style = "display:none";
+//   input_1.disabled = false;
+//   input_1.value = "Click on Me!";
+//   input_1.style.color = "black";
+// }
+
+// const body = document.querySelector("body");
+// body.append(input_1, input_2);
+
+const posts = [
+  {
+    src: "./image/320/bird-s-eye-view-photography-of-road-in-the-middle-of-desert-1201673 (1).jpg",
+    src_full: './image/1980/bird-s-eye-view-photography-of-road-in-the-middle-of-desert-1201673.jpg',
+    alt: "bird-s-eye-view-photography-of-road-in-the-middle-of-desert",
+  },
+  {
+    src: "./image/320/green-grass-during-sunset-1192671.jpg",
+    src_full: './image/1980/green-grass-during-sunset-1192671 (1).jpg',
+    alt: "green-grass-during-sunset",
+  },
+  {
+    src: "./image/320/old-town-with-green-trees-on-hill-3771061 (1).jpg",
+    src_full: './image/1980/old-town-with-green-trees-on-hill-3771061.jpg',
+    alt: "old-town-with-green-trees-on-hill",
+  },
+  {
+    src: "./image/320/scenic-view-of-mountain-under-cloudy-sky-1484282.jpg",
+    src_full: './image/1980/scenic-view-of-mountain-under-cloudy-sky-1484282 (1).jpg',
+    alt: "scenic-view-of-mountain-under-cloudy-sky",
+  },
+  {
+    src: "./image/320/train-with-smoke-507410.jpg",
+    src_full: './image/1980/train-with-smoke-507410 (1).jpg',
+    alt: "train-with-smoke",
+  },
+  {
+    src: "./image/320/white-and-brown-concrete-building-beside-body-of-water-near-2089799.jpg",
+    src_full: './image/1980/white-and-brown-concrete-building-beside-body-of-water-near-2089799 (1).jpg',
+    alt: "white-and-brown-concrete-building-beside-body-of-water",
+  },
+  {
+    src: "./image/320/woman-wearing-black-jacket-standing-near-ocean-with-swan-and-760984 (1).jpg",
+    src_full: './image/1980/woman-wearing-black-jacket-standing-near-ocean-with-swan-and-760984.jpg',
+    alt: "woman-wearing-black-jacket-standing-near-ocean-with-swan",
+  },
+  {
+    src: "./image/320/grayscale-photo-of-road-1038935 (1).jpg",
+    src_full: './image/1980/grayscale-photo-of-road-1038935.jpg',
+    alt: "grayscale-photo-of-road-1038935",
+  },
+
+];
+
+
+const fullview = document.createElement('div');
+fullview.classList.add('fullview');
+
+const full_image = document.createElement('img');
+full_image.src = './image/1980/bird-s-eye-view-photography-of-road-in-the-middle-of-desert-1201673.jpg';
+full_image.alt = 'bird-s-eye-view-photography-of-road-in-the-middle-of-desert';
+
+fullview.append(full_image);
+
+const preview = document.createElement('ul');
+preview.classList.add('preview');
+
+
+const preview_elem = createPreview(posts);
+preview.append(...preview_elem);
+
+function createPreview(posts){
+  return posts.reduce((acc,el) => acc.concat(createPreviewImg(el)),[]);
+}
+
+function createPreviewImg({src, src_full, alt}){
+const preview_item = document.createElement('li');
+const preview_item_img = document.createElement('img');
+preview_item_img.src = src;
+preview_item_img.setAttribute ('data-fullview', src_full );//добавление своего атрибута на элемент
+preview_item_img.alt = alt;
+
+preview_item.append(preview_item_img);
+
+return preview_item;
+}
+
+const image_gallery = document.querySelector('.js-image-gallery');
+image_gallery.append(fullview, preview);
+
+preview.addEventListener('click', handlerClick);
+
+function handlerClick (event){
+  if (event.target.nodeName!=='IMG')
+  return;
+ // console.log(event.target.attributes);
+// console.log(event.target.getAttribute('data-fullview')); 
+full_image.src= event.target.getAttribute('data-fullview');
+}
+
+
+// console.log(image_gallery);
+
+
+
+
+
+
+
+
+
+
+// const fullview = document.createElement('div');
+// fullview.classList.add('fullview');
+
+// const full_image = document.createElement('img');
+// full_image.src = './image/1980/bird-s-eye-view-photography-of-road-in-the-middle-of-desert-1201673.jpg';
+// full_image.alt = 'bird-s-eye-view-photography-of-road-in-the-middle-of-desert';
+
+// fullview.append(full_image);
+
+// const preview = document.createElement('ul');
+// preview.classList.add('preview');
+
+// const preview_item = document.createElement('li');
+// const preview_item_img = document.createElement('img');
+// preview_item_img.src = './image/320/bird-s-eye-view-photography-of-road-in-the-middle-of-desert-1201673 (1).jpg';
+// preview_item_img.setAttribute ('data-fullview', './image/1980/bird-s-eye-view-photography-of-road-in-the-middle-of-desert-1201673.jpg' );
+// preview_item_img.alt = 'bird-s-eye-view-photography-of-road-in-the-middle-of-desert';
+
+// const preview_item1 = document.createElement('li');
+// const preview_item_img1 = document.createElement('img');
+// preview_item_img1.src = './image/320/green-grass-during-sunset-1192671.jpg';
+// preview_item_img1.setAttribute ('data-fullview', './image/1980/green-grass-during-sunset-1192671 (1).jpg' );
+// preview_item_img1.alt = 'green-grass-during-sunset';
+
+
+// preview_item.append(preview_item_img, preview_item_img1);
+// preview.append(preview_item);
+
+// const image_gallery = document.querySelector('.js-image-gallery');
+// image_gallery.append(fullview, preview);
+
+// preview.addEventListener('click', handlerClick);
+
+
+
+// function handlerClick (event){
+//   if (event.target.nodeName!=='IMG')
+//   return;
+// console.log(event.target.attributes);
+
+// // console.log(event.target.getAttribute('data-fullview'));
+
+//  full_image.src= event.target.getAttribute('data-fullview');
+// }
+
+
+// console.log(image_gallery);

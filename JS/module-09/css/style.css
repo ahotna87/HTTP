@@ -1,0 +1,21 @@
+.time {
+  color: red;
+  font-size: 30px;
+  text-align: center;
+  background-color: #000;
+}
+.stopwatch {
+  border: solid 1px #000;
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+}
+ul {
+  padding: 0;
+}
+ul > li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
