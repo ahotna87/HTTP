@@ -143,8 +143,7 @@
 // console.log(student.getYear()); //выведет 2017console.log(worker.getCourse()); //выведет 3 - третий курс, так как текущий год 2020
 // console.log(student.getCourse());
 
-
-
+//===============================secundomer===================
 
 const watch = document.querySelector(".stopwatch");
 const startBtn = document.querySelector(".js-start");
@@ -153,7 +152,6 @@ const lapBtn = document.querySelector(".js-take-lap");
 const clockface = document.querySelector(".js-time");
 
 const js_laps = document.querySelector(".js-laps");
-
 
 class Timer {
   constructor({ onTick }) {
@@ -170,12 +168,11 @@ class Timer {
       this.isActiv = true;
       this.startTime = Date.now();
       startBtn.textContent = "Pause";
-      
 
       this.timerId = setInterval(() => {
         const currentTime = Date.now() + this.pauseTime;
         this.deltaTime = currentTime - this.startTime;
-        
+
         const timeCount = new Date(this.deltaTime - 10800000);
 
         const hour = timeCount.getHours();
@@ -220,13 +217,6 @@ const timer = new Timer({
   onTick: updateClockface,
 });
 
-const timer1 = new Timer({
-  onTick: updateClockface,
-});
-
-const timer2 = new Timer({
-  onTick: updateClockface,
-});
 
 startBtn.addEventListener("click", timer.handleStart.bind(timer));
 stopBtn.addEventListener("click", timer.handleStop.bind(timer));
@@ -238,3 +228,24 @@ function updateClockface({ hour, min, sec, ms }) {
   ).padStart(2, "0")}.${String(ms).padStart(2, "0")}`;
 }
 watch.append(js_laps);
+
+
+
+//=======================clock========================
+
+// const clockface = document.querySelector(".js-time");
+
+// setInterval(() => {
+//  let clock = new Date();
+//  let hour = clock.getHours();
+//  let min = clock.getMinutes();
+//  let sec = clock.getSeconds();
+//   updateClockface({hour, min, sec});
+// }, 1000);
+
+// function updateClockface({ hour, min, sec }) {
+//   clockface.textContent = `${hour}:${String(min).padStart(2, "0")}:${String(
+//     sec
+//   ).padStart(2, "0")}`;
+// }
+//===================================================
